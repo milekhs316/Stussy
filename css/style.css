@@ -54,6 +54,8 @@ header .logo{
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    z-index:21;
+    cursor: pointer;
 }
 
 /* video */
@@ -536,7 +538,10 @@ header .logo{
 .m-header-wrap .m-logo{
     width: 70px;
     height: 70px;
-    
+    z-index: 20;
+}
+.icon.site-logo{
+    transition: 0.5s;
 }
 #trigger{
     width: 30px;
@@ -553,6 +558,7 @@ header .logo{
     top: 0;
     background-color: #fff;
     transition: 0.3s;
+    z-index: 20;
 }
 #trigger span:nth-child(1){
     top: 0;
@@ -588,17 +594,22 @@ header .logo{
     left: 0;
     background-color: #fff;
     z-index: 10;
-    display: none !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.8s ease;
+    transform: translateX(100%);
+}
+.m-menu-in.active{
+    transform: translateX(0);
 }
 .m-menu-in a{
     color: #121212;
     width: 100%;
     font-size: 48px;
     padding: 10PX;
+    text-align: center;
 }
 
 
@@ -785,7 +796,7 @@ header .logo{
     .swiper-scrollbar-drag {
         height: 8px !important;
         border-radius: 10px !important;
-        top: -2px !important;
+        top: -4px !important;
         background: #121212 !important;
     }
 }
