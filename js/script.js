@@ -43,8 +43,22 @@ $(document).ready(function(){
     
     if($('#trigger').hasClass("active")){
       $('#trigger').removeClass('active');
+      $('.ham').css({
+        backgroundColor: '#fff'
+      })
+      $('.icon.site-logo').css({
+        fill: '#fff'
+      })
+      $('.m-menu-in').removeClass('active');
     }else{
       $("#trigger").addClass('active');
+      $('.ham').css({
+        backgroundColor: '#121212'
+      })
+      $('.icon.site-logo').css({
+        fill: '#121212'
+      })
+      $('.m-menu-in').addClass('active');
     }
   });
 
